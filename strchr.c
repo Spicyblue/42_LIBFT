@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   strchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 18:55:39 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/13 12:07:11 by okochulo         ###   ########.fr       */
+/*   Created: 2025/05/13 11:53:38 by okochulo          #+#    #+#             */
+/*   Updated: 2025/05/13 12:06:58 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,18 @@
 # include <stdio.h>
 # include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char    *ft_strchr(const char *str, int c)
 {
-	size_t	counter;
-	unsigned char	c1;
-	unsigned char	c2;
+    int ct;
 
-	counter = 0;
-	while (counter < n)
-	{
-		c1 = (unsigned char)*s1;
-		c2 = (unsigned char)*s2;
-		if (c1 != c2 || c1 == '\0' || c2 == '\0')
-		{
-			return (c1 - c2);
-		}
-		s1++;
-		s2++;
-		counter++;
-	}
-	return (0);
+    ct = 0;
+    while (str[ct])
+    {
+        if (str[ct] == (char)c)
+            return ((char *)&str[ct]);
+        ct++;
+    }
+    if ((char)c == '\0')
+        return ((char *)&str[ct]);
+    return (0);
 }
