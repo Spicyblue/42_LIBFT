@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/13 12:12:35 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/13 14:41:52 by okochulo         ###   ########.fr       */
+/*   Created: 2025/05/13 14:06:54 by okochulo          #+#    #+#             */
+/*   Updated: 2025/05/13 14:26:06 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,20 @@
 # include <stdio.h>
 # include "libft.h"
 
-char    *ft_strrchr(const char *s, int c)
+void    *ft_memchr(const void *ptr, int val, size_t num)
 {
-    const char  *last;
+    const unsigned char *p = (const unsigned char *)ptr;
+    unsigned char v = (unsigned char)val;
+    size_t  i;
 
-    last = NULL;
-    while (*s)
+    i = 0;
+    while (i < num)
     {
-        if (*s == (char)c)
-            last = s;
-        s++;
+        if (p[i] == v)
+        {
+            return (void *)(p + i);
+        }
+        i++;
     }
-    if ((char)c == '\0')
-        return (char *)s;
-    
-    return (char *)last;
+    return (NULL);
 }
