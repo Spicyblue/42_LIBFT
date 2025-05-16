@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <unistd.h>
-# include <stdio.h>
-# include "libft.h"
+#include <unistd.h>
+#include <stdio.h>
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {

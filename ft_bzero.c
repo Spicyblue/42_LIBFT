@@ -10,19 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <unistd.h>
-# include <stdio.h>
-# include "libft.h"
+#include <unistd.h>
+#include <stdio.h>
+#include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *src = (unsigned char *)s;
-    size_t i;
+	unsigned char	*src;
+	size_t		i;
 
-    i = 0;
-    while (i < n)
-    {
-        src[i] = 0;
-        i++;
-    }
+	i = 0;
+	src = (unsigned char *)s;
+	while (i < n)
+	{
+		src[i] = 0;
+		i++;
+	}
 }

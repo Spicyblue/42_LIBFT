@@ -10,21 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <unistd.h>
-# include <stdio.h>
-# include "libft.h"
+#include <unistd.h>
+#include <stdio.h>
+#include "libft.h"
 
-void    *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    unsigned char *str = (unsigned char *)s;
-    unsigned char cst = (unsigned char)c;
-    size_t i;
+	size_t	i;
+	unsigned char	*str;
 
-    i = 0;
-    while (i < n)
-    {
-        str[i] = cst;
-        i++;
-    }
-    return (s);
+	str = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		str[i] = (unsigned char)c;
+		i++;
+	}
+	return (s);
 }
