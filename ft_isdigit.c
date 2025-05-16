@@ -10,16 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+#include <stdio.h>
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdio.h>
-# include "libft.h"
-
-int ft_isdigit(int c )
+int	ft_isdigit(int c)
 {
-    if (c == EOF)
-        return (0);
-    if ('0' <= c && c <= '9')
-        return (1);
-    return (0);
+	if (c == EOF)
+		return (0);
+	if ('0' <= c && c <= '9')
+		return (1);
+	return (0);
 }
