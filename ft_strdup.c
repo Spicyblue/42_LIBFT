@@ -1,14 +1,14 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: okochulo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/16 13:31:55 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/16 14:21:16 by okochulo         ###   ########.fr       */
+/*   Created: 2025/05/19 12:00:37 by okochulo          #+#    #+#             */
+/*   Updated: 2025/05/19 12:21:32 by okochulo         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
@@ -16,30 +16,20 @@
 #include <errno.h>
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+size_t	ft_get_strlen(const char *str)
 {
-	const char	*src;
-	char			*cpy;
-	char			*dst;
-	size_t			len;
+	size_t	len;
 
-	if (str == NULL)
-		return (NULL);
 	len = 0;
-	src = str;
-	while (*src)
+	while (str[len])
 	{
 		len++;
-		src++;
 	}
-	cpy = malloc(sizeof(char) * (len + 1));
-	if (cpy == NULL)
-	{
-		errno = ENOMEM;
-		return (NULL);
-	}
-	src = str;
-	dst = cpy;
+	return (len);
+}
+
+char	*ft_cpystr(char *dst, const char *src)
+{
 	while (*src)
 	{
 		*dst = *src;
@@ -47,5 +37,23 @@ char	*ft_strdup(const char *str)
 		dst++;
 	}
 	*dst = '\0';
+	return (dst);
+}
+
+char	*ft_strdup(const char *str)
+{
+	char			*cpy;
+	size_t			len;
+
+	if (str == NULL)
+		return (NULL);
+	len = ft_get_strlen(str);
+	cpy = malloc(sizeof(char) * (len + 1));
+	if (cpy == NULL)
+	{
+		errno = ENOMEM;
+		return (NULL);
+	}
+	ft_cpystr(cpy, str);
 	return (cpy);
 }

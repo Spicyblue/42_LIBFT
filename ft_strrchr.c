@@ -6,7 +6,7 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 12:12:35 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/13 14:41:52 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/19 12:24:38 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ char	*ft_strrchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == (char)c)
-		last = s;
+		{
+			last = s;
+		}
 		s++;
 	}
 	if ((char)c == '\0')
