@@ -10,22 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <unistd.h>
-# include <stdio.h>
-# include "libft.h"
+#include <unistd.h>
+#include <stdio.h>
+#include "libft.h"
 
-char    *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-    int ct;
+	int	ct;
 
-    ct = 0;
-    while (str[ct])
-    {
-        if (str[ct] == (char)c)
-            return ((char *)&str[ct]);
-        ct++;
-    }
-    if ((char)c == '\0')
-        return ((char *)&str[ct]);
-    return (0);
+	ct = 0;
+	while (str[ct])
+	{
+		if (str[ct] == (char)c)
+			return ((char *)&str[ct]);
+		ct++;
+	}
+	if ((char)c == '\0')
+		return ((char *)&str[ct]);
+	return (0);
 }

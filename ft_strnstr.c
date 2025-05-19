@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <unistd.h>
-# include <stdio.h>
-# include "libft.h"
+#include <unistd.h>
+#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
@@ -27,8 +27,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	while (str[st_ct] && st_ct < len)
 	{
 		tf_ct = 0;
-		while ((st_ct + tf_ct) < len && 
-                str[st_ct + tf_ct] == to_find[tf_ct] && to_find[tf_ct])
+		while ((st_ct + tf_ct) < len
+			&& (str[st_ct + tf_ct]) == to_find[tf_ct] && to_find[tf_ct])
 		{
 			tf_ct++;
 		}

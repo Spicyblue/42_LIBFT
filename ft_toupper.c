@@ -10,15 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <unistd.h>
-# include <stdio.h>
-# include "libft.h"
+#include <unistd.h>
+#include <stdio.h>
+#include "libft.h"
 
-int ft_toupper(int c )
+int	ft_toupper(int c)
 {
-    if (c == EOF)
-        return (0);
-    if ('a' <= c && c <= 'z')
-        return (c - 32);
-    return (c);
+	if (c == EOF)
+		return (0);
+	if ('a' <= c && c <= 'z')
+		return (c - 32);
+	return (c);
 }
