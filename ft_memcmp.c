@@ -6,12 +6,10 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 16:09:03 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/13 16:22:39 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/21 16:38:17 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

@@ -6,25 +6,11 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 17:35:27 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/13 12:01:35 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/21 17:00:32 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
-
-int	ft_str_len(char *str)
-{
-	unsigned int	ct;
-
-	ct = 0;
-	while (str[ct])
-	{
-		ct++;
-	}
-	return (ct);
-}
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
@@ -32,8 +18,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	src_len;
 	unsigned int	i;
 
-	dest_len = ft_str_len(dest);
-	src_len = ft_str_len(src);
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
 	if (size <= dest_len)
 	{
 		return (size + src_len);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okochulo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 12:00:37 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/19 12:21:32 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/21 16:49:11 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <errno.h>
 #include "libft.h"
 
-size_t	ft_get_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	len;
 
@@ -47,7 +47,7 @@ char	*ft_strdup(const char *str)
 
 	if (str == NULL)
 		return (NULL);
-	len = ft_get_strlen(str);
+	len = ft_strlen(str);
 	cpy = malloc(sizeof(char) * (len + 1));
 	if (cpy == NULL)
 	{

@@ -6,12 +6,10 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 14:06:54 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/13 14:26:06 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/21 16:38:08 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *ptr, int val, size_t num)

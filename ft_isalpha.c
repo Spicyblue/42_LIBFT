@@ -3,20 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okochulo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 11:56:02 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/19 11:56:11 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/21 16:32:23 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_isalpha(int c)
 {
-	if (c == EOF)
+	if (c == NULL)
 		return (0);
 	if ('a' <= c && c <= 'z')
 		return (1);

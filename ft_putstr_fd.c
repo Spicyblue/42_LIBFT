@@ -3,27 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
+/*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 18:10:04 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/19 18:16:31 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/21 16:51:24 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-
-size_t	ft_get_strlen(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len])
-	{
-		len++;
-	}
-	return (len);
-}
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -31,6 +18,6 @@ void	ft_putstr_fd(char *s, int fd)
 
 	if (s == NULL)
 		return ;
-	len = ft_get_strlen(s);
+	len = ft_str_len(s);
 	write (fd, s, len);
 }

@@ -3,28 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
+/*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 13:03:18 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/21 13:06:41 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/21 17:01:44 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
 #include "libft.h"
-
-size_t	ft_get_strlen(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len])
-	{
-		len++;
-	}
-	return (len);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -33,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (s == NULL || f == NULL)
 		return (NULL);
-	res = (char *)malloc(sizeof(char) * (ft_get_strlen(s) + 1));
+	res = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (res == NULL)
 		return (NULL);
 	i = 0;

@@ -6,12 +6,10 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 16:39:26 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/13 16:55:15 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/21 16:39:11 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

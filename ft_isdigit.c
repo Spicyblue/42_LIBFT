@@ -6,17 +6,15 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 14:04:03 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/12 14:11:34 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/21 16:33:02 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_isdigit(int c)
 {
-	if (c == EOF)
+	if (c == NULL)
 		return (0);
 	if ('0' <= c && c <= '9')
 		return (1);
