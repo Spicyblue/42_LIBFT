@@ -36,3 +36,48 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (ptr);
 }
+/*
+int main()
+{
+    size_t count = 5;
+    size_t size = sizeof(int);
+
+    // Use ft_calloc
+    int *array1 = (int *)ft_calloc(count, size);
+    // Use standard calloc for comparison
+    int *array2 = (int *)calloc(count, size);
+
+    // Checking the contents of the arrays
+    if (array1 && array2)
+    {
+        printf("After ft_calloc: ");
+        size_t i = 0;
+        while (i < count)
+        {
+            printf("%d ", array1[i]);
+            i++;
+        }
+        printf("\n");
+
+        printf("After calloc: ");
+        i = 0;
+        while (i < count)
+        {
+            printf("%d ", array2[i]);
+            i++;
+        }
+        printf("\n");
+    }
+    // Free the allocated memory
+    free(array1);
+    free(array2);
+
+    return 0;
+}
+*/
+/*
+The ft_calloc function allocates memory for an array of count elements of 
+size bytes each and initializes all bytes in the allocated memory to zero.
+It returns a pointer to the allocated memory, or NULL if the allocation fails. 
+The function checks for overflow conditions and handles them appropriately.
+*/
