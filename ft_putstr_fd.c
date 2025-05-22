@@ -21,7 +21,7 @@ void	ft_putstr_fd(char *s, int fd)
 	len = ft_strlen(s);
 	write (fd, s, len);
 }
-/*
+
 #include <string.h>
 
 int main() {
@@ -46,7 +46,7 @@ int main() {
 
     return (0);
 }
-*/
+
 /*
 The ft_putstr_fd function writes a string to the specified file descriptor.
 It takes two parameters:

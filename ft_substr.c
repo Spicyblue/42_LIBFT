@@ -10,22 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
-
-size_t	ft_get_strlen(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len])
-	{
-		len++;
-	}
-	return (len);
-}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -37,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	str_len = ft_get_strlen(s);
+	str_len = ft_strlen(s);
 	if (start >= str_len)
 		tot_len = 0;
 	else if (start + len > str_len)
@@ -55,3 +40,41 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
+/*
+int main() {
+    char *string = "Hello, World!";
+    unsigned int start_positions[] = {0, 2, 11, 15};
+    size_t lengths[] = {5, 5, 5, 5};
+    int test_cases = sizeof(start_positions) / sizeof(start_positions[0]);
+    int i = 0;
+
+    while (i < test_cases) {
+        char *result = ft_substr(string, start_positions[i], lengths[i]);
+        printf("ft_substr('%s', %u, %zu) = '%s'\n", 
+        string, start_positions[i], lengths[i], result);
+        free(result);
+        i++;
+    }
+
+    return (0);
+}
+*/
+/*
+The ft_substr function creates a substring from a given string.
+It takes three parameters:
+1. the original string (s).
+2. the starting position (start) from which to create the substring.
+3. the length (len) of the substring to be created.
+The function returns a pointer to the newly created substring.
+If the starting position is greater than the length of the string,
+the function returns an empty string.
+If the starting position is within the string but the length exceeds
+the remaining length of the string, the function creates a substring
+of the remaining characters.
+If the starting position is greater than the length of the string,
+the function returns NULL.
+The function allocates memory for the new substring and copies the characters
+from the original string to the new substring.
+The function also ensures that the new substring is null-terminated.
+The caller is responsible for freeing the memory allocated for the substring.
+*/
