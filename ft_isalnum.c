@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (c == NULL)
+	if (c == EOF)
 		return (0);
 	if ('a' <= c && c <= 'z')
 		return (1);
@@ -24,3 +24,32 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+/*
+#include <ctype.h> 
+
+int main()
+{
+    // Test cases
+    char tests[] = {'a', 'Z', '5', '!', ' '};
+    size_t num_tests = sizeof(tests) / sizeof(tests[0]);
+
+    // Using a while loop to test each character
+    size_t i = 0;
+    while (i < num_tests)
+    {
+        char test = tests[i];
+        printf("Test '%c': ft_isalnum: %d, isalnum: %d\n",
+             test, ft_isalnum(test), isalnum(test));
+        i++;
+    }
+
+    return (0);
+}
+*/
+/*
+The ft_isalnum function checks if the given character is 
+an alphanumeric character (either a letter or a digit). 
+It returns 1 if the character is alphanumeric and 0 otherwise.
+The function also checks if the character is EOF (end of file
+and returns 0 in that case.
+*/

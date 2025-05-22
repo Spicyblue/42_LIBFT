@@ -72,7 +72,7 @@ int main()
     free(array1);
     free(array2);
 
-    return 0;
+    return (0);
 }
 */
 /*
