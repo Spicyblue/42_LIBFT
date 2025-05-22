@@ -93,9 +93,7 @@ char	**ft_process_split(char const *s, char c, char **res)
 char	**ft_split(char const *s, char c)
 {
 	size_t		word;
-	size_t		i;
 	char		**res;
-	const char	*wrd_start;
 
 	word = ft_ct_wrd(s, c);
 	res = (char **)malloc(sizeof(char *) * (word + 1));
@@ -103,3 +101,63 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (ft_process_split(s, c, res));
 }
+/*
+void print_split(char **split) {
+    if (!split) {
+        printf("NULL\n");
+        return;
+    }
+    size_t i = 0;
+    while (split[i]) {
+        printf("\"%s\"\n", split[i]);
+        free(split[i]); // Free each word
+        i++;
+    }
+    free(split); // Free the array of pointers
+}
+
+int main() {
+    const char *test_cases[] = {
+        "Hello, World!",
+        "This is a test string",
+        "Libft is great",
+        ",a,b,c,",
+        ""
+    };
+
+    char delimiters[] = {
+        ' ',
+        ' ',
+        ' ',
+        ',',
+        ','
+    };
+
+    size_t num_tests = sizeof(test_cases) / sizeof(test_cases[0]);
+    size_t i = 0;
+
+    while (i < num_tests) {
+        // Using custom ft_split
+        char **custom_result = ft_split(test_cases[i], delimiters[i]);
+
+        // Printing results
+        printf("Test case %zu:\n", i + 1);
+        printf("String: \"%s\"\n", test_cases[i]);
+        printf("Delimiter: '%c'\n", delimiters[i]);
+        printf("Custom ft_split result:\n");
+        print_split(custom_result);
+        printf("\n");
+
+        i++;
+    }
+
+    return 0;
+}
+*/
+/*
+The ft_split function splits a string into an array of strings
+  based on a specified delimiter. It returns an array of strings
+  (char **) and the last element of the array is NULL.
+  The function allocates memory for the array and each substring,
+  so it is the caller's responsibility to free the memory after use.
+*/
