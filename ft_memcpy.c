@@ -28,3 +28,44 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/*
+#include <string.h>
+
+int main()
+{
+    // Test cases
+    char src1[] = "Hello, World!";
+    char src2[] = "Another example.";
+    char src3[] = "Different lengths";
+    
+    char dest_ft[50];
+    char dest_std[50];
+
+    // Copy using ft_memcpy
+    ft_memcpy(dest_ft, src1, strlen(src1) + 1);
+    memcpy(dest_std, src1, strlen(src1) + 1);
+    printf("ft_memcpy: \"%s\", memcpy: \"%s\"\n", dest_ft, dest_std);
+
+    // Copy using ft_memcpy
+    ft_memcpy(dest_ft, src2, strlen(src2) + 1);
+    memcpy(dest_std, src2, strlen(src2) + 1);
+    printf("ft_memcpy: \"%s\", memcpy: \"%s\"\n", dest_ft, dest_std);
+
+    // Copy using ft_memcpy with partial length
+    ft_memcpy(dest_ft, src3, 9);  // Copy only part of the string
+    dest_ft[9] = '\0';            // Null-terminate
+    memcpy(dest_std, src3, 9);
+    dest_std[9] = '\0';           // Null-terminate
+    printf("ft_memcpy: \"%s\", memcpy: \"%s\"\n", dest_ft, dest_std);
+
+    return (0);
+}
+*/
+/*
+The ft_memcpy function copies n bytes from the source memory area (src)
+to the destination memory area (dest).
+It returns a pointer to the destination memory area (dest).
+It does not check for overlapping memory areas, so it is the
+responsibility of the caller to ensure that the source and destination
+memory areas do not overlap.
+*/
