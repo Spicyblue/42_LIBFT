@@ -6,7 +6,7 @@
 /*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 16:23:45 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/23 13:16:03 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/23 13:26:10 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ size_t			ft_strlen(const char *str);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *str, const char *to_find, size_t len);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 #endif // end the defintion of LIBFT_H header file
