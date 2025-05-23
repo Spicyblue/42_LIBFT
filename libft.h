@@ -47,4 +47,6 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 size_t			ft_strlen(const char *str);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
+int             ft_toupper(int c);
+int             ft_tolower(int c);
 #endif // end the defintion of LIBFT_H header file
