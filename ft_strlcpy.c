@@ -6,7 +6,7 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 17:32:35 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/23 13:04:48 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/23 13:42:30 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
 	size_t	i;
 
+	if (src[0] == '\0')
+		return (0);
 	i = 0;
 	if (size > 0)
 	{
