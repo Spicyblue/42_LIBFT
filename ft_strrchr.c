@@ -6,7 +6,7 @@
 /*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 12:10:27 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/23 19:15:26 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/23 19:52:02 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *str, int c)
 {
 	size_t		ct;
-	char	*last;
+	char		*last;
 
 	last = 0;
 	ct = 0;
