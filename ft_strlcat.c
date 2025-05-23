@@ -6,7 +6,7 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 17:35:27 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/23 13:44:19 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/23 13:46:34 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	size_t	src_len;
 	size_t	i;
 
-	if (src[0] == '\0')
-		return (0);
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	if (size <= dest_len)
