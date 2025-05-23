@@ -15,17 +15,19 @@
 char	*ft_strrchr(const char *str, int c)
 {
 	int	ct;
-
+	char	*last;
+	
+	last = 0;
 	ct = 0;
 	while (str[ct])
 	{
 		if (str[ct] == (char)c)
-			return ((char *)&str[ct]);
+			last = (char *)&str[ct];
 		ct++;
 	}
 	if ((char)c == '\0')
 		return ((char *)&str[ct]);
-	return (0);
+	return (last);
 }
 /*
 #include <string.h>
@@ -53,18 +55,18 @@ int main()
 
     while (i < num_tests) {
         // Using custom ft_strchr
-        char *custom_result = ft_strchr(test_strings[i], test_chars[i]);
+        char *custom_result = ft_strrchr(test_strings[i], test_chars[i]);
 
         // Using standard strchr
-        char *standard_result = strchr(test_strings[i], test_chars[i]);
+        char *standard_result = strrchr(test_strings[i], test_chars[i]);
 
         // Printing results
         printf("Test case %zu:\n", i + 1);
         printf("String: \"%s\"\n", test_strings[i]);
         printf("Character: '%c'\n", test_chars[i]);
-        printf("Custom ft_strchr: \"%s\"\n",
+        printf("Custom ft_strrchr: \"%s\"\n",
              custom_result ? custom_result : "NULL");
-        printf("Standard strchr: \"%s\"\n",
+        printf("Standard strrchr: \"%s\"\n",
              standard_result ? standard_result : "NULL");
 
         // Validation
