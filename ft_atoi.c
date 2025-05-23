@@ -6,18 +6,18 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 19:05:19 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/22 12:09:34 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/23 19:16:00 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is_space(char s)
+static	ft_is_space(char s)
 {
 	return ((s >= 9 && s <= 13) || s == 32);
 }
 
-int	ft_is_num(char s)
+static	ft_is_num(char s)
 {
 	return (s >= 48 && s <= 57);
 }

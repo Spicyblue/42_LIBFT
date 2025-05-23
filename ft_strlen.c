@@ -6,7 +6,7 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 16:00:47 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/21 17:00:56 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/23 19:14:44 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int	ct;
+	size_t	ct;
 
 	ct = 0;
 	while (str[ct])

@@ -6,13 +6,13 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 12:49:09 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/21 16:36:01 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/23 19:28:40 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_ct_dig(int n)
+static	ft_ct_dig(int n)
 {
 	int	ct;
 
@@ -27,7 +27,7 @@ int	ft_ct_dig(int n)
 	return (ct);
 }
 
-char	*ft_min_int(void)
+static	*ft_min_int(void)
 {
 	char	*res;
 
@@ -37,7 +37,7 @@ char	*ft_min_int(void)
 	return (res);
 }
 
-void	ft_convert_int_to_str(char *res, unsigned int n, int len)
+static	ft_convert_int_to_str(char *res, unsigned int n, int len)
 {
 	while (len > 0)
 	{
