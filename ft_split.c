@@ -6,13 +6,13 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 12:49:34 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/23 19:28:38 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/23 19:39:45 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	ft_ct_wrd(const char *s, char delim)
+static size_t	ft_ct_wrd(const char *s, char delim)
 {
 	size_t	count;
 	int		char_in_word;
@@ -33,7 +33,7 @@ static	ft_ct_wrd(const char *s, char delim)
 	return (count);
 }
 
-static	*ft_strndup(const char *start, size_t len)
+static char	*ft_strndup(const char *start, size_t len)
 {
 	char	*substr;
 	size_t	i;
@@ -51,7 +51,7 @@ static	*ft_strndup(const char *start, size_t len)
 	return (substr);
 }
 
-static	ft_get_wrd_len(const char *s, char c)
+static size_t	ft_get_wrd_len(const char *s, char c)
 {
 	size_t	len;
 
@@ -61,7 +61,7 @@ static	ft_get_wrd_len(const char *s, char c)
 	return (len);
 }
 
-static	**ft_process_split(char const *s, char c, char **res)
+static char	**ft_process_split(char const *s, char c, char **res)
 {
 	size_t		i;
 	const char	*wrd_start;

@@ -6,13 +6,13 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 15:51:00 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/23 19:29:54 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/23 19:40:51 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	ft_cpystr(char *dest, const char *src, size_t dest_ct)
+static void	ft_cpystr(char *dest, const char *src, size_t dest_ct)
 {
 	size_t	i;
 

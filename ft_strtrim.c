@@ -6,13 +6,13 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:01:12 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/23 19:31:05 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/23 19:50:37 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	ft_char_in_str(char c, const char *str)
+static int	ft_char_in_str(char c, const char *str)
 {
 	size_t	i;
 
