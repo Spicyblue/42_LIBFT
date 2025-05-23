@@ -6,7 +6,7 @@
 /*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 16:23:45 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/21 17:12:17 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/23 12:12:40 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <errno.h>
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
@@ -47,6 +46,6 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 size_t			ft_strlen(const char *str);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
-int             ft_toupper(int c);
-int             ft_tolower(int c);
+int				ft_toupper(int c);
+int				ft_tolower(int c);
 #endif // end the defintion of LIBFT_H header file
