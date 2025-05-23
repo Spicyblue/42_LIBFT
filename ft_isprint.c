@@ -14,8 +14,6 @@
 
 int	ft_isprint(int c)
 {
-	if (c == EOF)
-		return (0);
 	if (32 <= c && c <= 126)
 		return (1);
 	return (0);

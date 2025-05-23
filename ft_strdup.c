@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <errno.h>
 #include "libft.h"
 
 char	*ft_cpystr(char *dst, const char *src)
@@ -35,10 +34,7 @@ char	*ft_strdup(const char *str)
 	len = ft_strlen(str);
 	cpy = malloc(sizeof(char) * (len + 1));
 	if (cpy == NULL)
-	{
-		errno = ENOMEM;
 		return (NULL);
-	}
 	ft_cpystr(cpy, str);
 	return (cpy);
 }
