@@ -6,17 +6,17 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 17:35:27 by okochulo          #+#    #+#             */
-/*   Updated: 2025/05/21 17:00:32 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/05/23 13:06:55 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
-	unsigned int	dest_len;
-	unsigned int	src_len;
-	unsigned int	i;
+	size_t	dest_len;
+	size_t	src_len;
+	size_t	i;
 
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
